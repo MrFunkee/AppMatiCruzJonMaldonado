@@ -11,6 +11,27 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+
+  {
+    path: 'metodo-get',
+    loadChildren: () => import('./metodo-get/metodo-get.module').then( m => m.MetodoGETPageModule)
+  },
+  {
+    path: 'metodo-post',
+    loadChildren: () => import('./metodo-post/metodo-post.module').then( m => m.MetodoPOSTPageModule)
+  },
+  {
+    path: 'metodo-update',
+    loadChildren: () => import('./metodo-update/metodo-update.module').then( m => m.MetodoUPDATEPageModule)
+  },
+  {
+    path: 'metodo-delete',
+    loadChildren: () => import('./metodo-delete/metodo-delete.module').then( m => m.MetodoDELETEPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({

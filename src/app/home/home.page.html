@@ -1,20 +1,70 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="background-color-black">
     <ion-title>
-      Blank
+      <img class="h5" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/logo-duoc.svg" alt="">
     </ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <body>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="text-center card-title "><br> <h3>Bienvenido a PruebaAPI!</h3> <br> </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <br>
+          <ion-item color="primary" shape="round" expand="block" fill="clear">
+            <ion-button [routerLink]="['/metodo-get']">
+              Método GET
+            </ion-button>
+            <ion-avatar slot="end">
+              <img src="https://www.mcicon.com/wp-content/uploads/2021/02/Technology_Camera_1-copy-22-600x600.jpg">
+            </ion-avatar>
+          </ion-item>
+          <br><br>
+          <ion-item color="secondary" shape="round" expand="block" fill="clear">
+            <ion-button [routerLink]="['/metodo-post']">
+              Método POST
+            </ion-button>
+            <ion-avatar slot="end">
+              <img src="https://www.seekpng.com/png/detail/197-1973056_list-icon-png-list-icon-white-png.png">
+            </ion-avatar>
+          </ion-item>
+          <br><br>
+          <ion-item color="primary" shape="round" expand="block" fill="clear">
+            <ion-button [routerLink]="['/metodo-update']">
+              Método UPDATE
+            </ion-button>
+            <ion-avatar slot="end">
+              <img src="https://www.seekpng.com/png/detail/197-1973056_list-icon-png-list-icon-white-png.png">
+            </ion-avatar>
+          </ion-item>
+          <br><br>
+          <ion-item color="secondary" shape="round" expand="block" fill="clear">
+            <ion-button [routerLink]="['/metodo-delete']">
+              Método DELETE
+            </ion-button>
+            <ion-avatar slot="end">
+              <img src="https://www.seekpng.com/png/detail/197-1973056_list-icon-png-list-icon-white-png.png">
+            </ion-avatar>
+          </ion-item>
+          <br><br>
+          <ion-item color="danger" shape="round" expand="block" fill="clear">
+            <ion-button [routerLink]="['/login']">
+              Página de Login
+            </ion-button>
+            <ion-avatar slot="end">
+              <img src="https://previews.123rf.com/images/get4net/get4net1812/get4net181201720/114695214-log-out.jpg">
+            </ion-avatar>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </body>
 </ion-content>

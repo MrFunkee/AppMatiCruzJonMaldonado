@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>metodoPOST</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button [routerLink]="['/']">
+    Volver!
+  </ion-button>
+  <ion-button (click)="postUsuario()">
+    postea basura
+  </ion-button>
+  <br>
+  <form [formGroup]="loginForm" (ngSubmit)="postUsuario(loginForm.value)">
+    <label for="correoI">Correo</label>
+    <input type="text" placeholder="Correo" formControlName="correo"> 
+    <br>
+    <label for="contrasenaI">Contraseña</label>
+    <input type="password" placeholder="Contraseña" formControlName="contrasena">
+    <br>
+    <input type="submit" value="Crear Usuario">
+  </form>
+</ion-content>
