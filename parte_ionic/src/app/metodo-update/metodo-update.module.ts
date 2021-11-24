@@ -8,12 +8,15 @@ import { MetodoUPDATEPageRoutingModule } from './metodo-update-routing.module';
 
 import { MetodoUPDATEPage } from './metodo-update.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MetodoUPDATEPageRoutingModule
+    MetodoUPDATEPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [MetodoUPDATEPage]
 })

@@ -8,9 +8,6 @@
   <ion-button [routerLink]="['/']">
     Volver!
   </ion-button>
-  <ion-button (click)="borraUsuario()">
-    BORRA basura
-  </ion-button>
   <br>
   <form [formGroup]="loginForm" (ngSubmit)="borraUsuario(loginForm.value)">
     <label for="idUsuarioI">Id del Usuario</label>

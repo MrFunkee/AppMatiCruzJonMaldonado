@@ -8,9 +8,6 @@
   <ion-button [routerLink]="['/']">
     Volver!
   </ion-button>
-  <ion-button (click)="listadoGET()">
-    listar usuarios!
-  </ion-button>
   <ion-list>
     <ion-item *ngFor="let c of listadoUsuarios.usuarios">
       id Usuario: {{c.idUsuario}}<br>
