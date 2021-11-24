@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
     private router: Router
   ) { }
   
-  errorVerficacion: Boolean = false;
+  errorVerificacion: Boolean = false;
   mensajeError: any = "holi"
 
   respuestaApi = "";
@@ -46,7 +46,7 @@ export class LoginPage implements OnInit {
       }
       else{
         console.log(this.respuestaApi);
-        this.errorVerficacion = true;
+        this.errorVerificacion = true;
         this.mensajeError = "El correo y la contraseña no corresponden"
       }
     });

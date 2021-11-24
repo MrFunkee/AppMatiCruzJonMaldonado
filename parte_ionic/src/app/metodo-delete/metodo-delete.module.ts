@@ -8,12 +8,15 @@ import { MetodoDELETEPageRoutingModule } from './metodo-delete-routing.module';
 
 import { MetodoDELETEPage } from './metodo-delete.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MetodoDELETEPageRoutingModule
+    MetodoDELETEPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [MetodoDELETEPage]
 })
