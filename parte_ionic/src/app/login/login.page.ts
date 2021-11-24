@@ -6,6 +6,8 @@ import { UsuariosService } from '../services/usuarios.service';
 
 import { Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -22,8 +24,13 @@ export class LoginPage implements OnInit {
   })
   
   
-  constructor(private servicio : UsuariosService, private router: Router) { }
+  constructor(
+    private servicio : UsuariosService, 
+    private router: Router
+  ) { }
   
+  errorVerficacion: Boolean = false;
+  mensajeError: any = "holi"
 
   respuestaApi = "";
 
@@ -34,13 +41,15 @@ export class LoginPage implements OnInit {
       this.respuestaApi = datos['message'];
 
       if(this.respuestaApi === "login_verificado"){
+        localStorage.setItem("correo",formulario['correo']);
         this.router.navigate(['/']);
       }
       else{
         console.log(this.respuestaApi);
+        this.errorVerficacion = true;
+        this.mensajeError = "El correo y la contraseña no corresponden"
       }
     });
-
   }
 
   ngOnInit() {
