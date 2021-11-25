@@ -1,25 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>metodoUPDATE</ion-title>
+    <ion-title>Metodo Update</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button [routerLink]="['/']">
+  <ion-button expand="block" [routerLink]="['/']">
     Volver!
   </ion-button>
   <br>
   <form [formGroup]="loginForm" (ngSubmit)="actualizaUsuario(loginForm.value)">
-    <label for="idUsuarioI">Id del Usuario</label>
-    <input type="number" id="idUsuarioI" min="1" formControlName="idUsuario"> 
+    <ion-label for="idUsuarioI">ID del Usuario</ion-label>
+    <ion-input type="number" id="idUsuarioI"  formControlName="idUsuario" placeholder="Ingresar ID" min="1"></ion-input>
     <br>
-    <label for="correoI">Correo Usuario</label>
-    <input type="text" id="correoI" formControlName="correo"> 
+    <ion-label for="correoI">Correo Usuario</ion-label>
+    <ion-input type="text" id="correoI" formControlName="correo" placeholder="Ingresar Correo"></ion-input>
     <br>
-    <label for="contrasenaI">Contraseña Nueva</label>
-    <input type="password" id="contrasenaI" formControlName="contrasena"> 
+    <ion-label for="contrasenaI">Contraseña Nueva</ion-label>
+    <ion-input type="password" id="contrasenaI" formControlName="contrasena" placeholder="Ingresar Contraseña"></ion-input>
     <br>
-    <input type="submit" value="Cambiar datos">
+    <ion-button type="submit" color="success" value="Cambiar datos">Cambiar Datos</ion-button>
   </form>
   <br>
   <div class="alert alert-danger" *ngIf="errorVerificacion">
