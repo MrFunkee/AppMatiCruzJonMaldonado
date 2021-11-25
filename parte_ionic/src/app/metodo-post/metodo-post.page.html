@@ -24,4 +24,7 @@
     <br>
     <ion-button type="submit" color="success" value="Crear Usuario">Crear Usuario</ion-button>
   </form>
+  <div class="alert alert-danger" *ngIf="errorVerificacion">
+    <p class="alerta">{{mensajeError}}</p>
+  </div>
 </ion-content>

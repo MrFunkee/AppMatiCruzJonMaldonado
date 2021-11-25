@@ -16,18 +16,16 @@ export class MetodoPOSTPage implements OnInit {
     contrasena : new FormControl('', Validators.required)
   })
 
-  // cadenaPost= {
-  //   "tipo": "crear",
-  //   "correo":"creadoDesdeApp@prueba2.org",
-  //   "contrasena":"appppp"
-  // };
-  cadenaPost={}
-
   constructor(private servicio: UsuariosService) { }
+
+  errorVerificacion: Boolean = false;
+  mensajeError: any = "holi"
 
   postUsuario(formulario){
     formulario['tipo'] = 'crear'
     this.servicio.postearUsuario(formulario).subscribe((datos) => {
+      this.errorVerificacion = true;
+      this.mensajeError = "Usuario creado correctamente"
       console.log(datos);
     });
   }
